@@ -1,12 +1,13 @@
 const express = require('express')
 const server = express();
+
 server.use(express.json());
-
-
 const helmet = require('helmet');
+const morgan = require('morgan');
 const cors = require('cors');
 
-const morgan = require('morgan');
+
+const tuckRouter=require('./routes/tucker-routes')
 
 
 server.use(helmet());
